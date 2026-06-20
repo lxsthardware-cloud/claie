@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e7f3e9" />
+    <title>Claire Hart Movement Check</title>
+    <meta
+      name="description"
+      content="A short Claire Hart quiz for women 40+ who feel stiffer, less steady, or less confident moving at home."
+    />
+    <meta property="og:title" content="Claire Hart Movement Check" />
+    <meta
+      property="og:description"
+      content="Answer a few quick questions and get matched with the right Claire Hart program."
+    />
+    <meta property="og:image" content="./assets/gentle-system.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="quiz-app" aria-live="polite">
+      <header class="quiz-topbar">
+        <button id="back-button" class="back-button" type="button" aria-label="Back">‹</button>
+        <div>
+          <p id="section-label">Movement Check</p>
+          <div class="progress-track" aria-hidden="true">
+            <span id="progress-fill"></span>
+          </div>
+        </div>
+      </header>
+
+      <section id="screen" class="screen"></section>
+    </main>
+
+    <template id="intro-template">
+      <section class="intro-screen">
+        <div class="tiny-check">✓</div>
+        <h1>Find out what is quietly making movement harder.</h1>
+        <p class="intro-copy">
+          Claire built this short check for women who keep saying, “I’m just stiff today,” while stairs,
+          knees, chairs, and walks slowly become things to think about.
+        </p>
+        <div class="pill">⏱ 2-minute quiz</div>
+        <button class="primary-button" data-action="start" type="button">Start the check</button>
+        <p class="terms-note">
+          Educational wellness guidance only. Stop if movement causes sharp pain, dizziness, chest pain,
+          or anything that feels unsafe.
+        </p>
+      </section>
+    </template>
+
+    <template id="trust-template">
+      <section class="trust-screen">
+        <div class="mini-logo">C</div>
+        <h1>Most women do not lose confidence overnight.</h1>
+        <div class="map-card" aria-hidden="true">
+          <div class="dot-grid"></div>
+          <div class="avatar avatar-left"></div>
+          <div class="avatar avatar-right"></div>
+          <p>Small choices repeat until they become the body’s new rules.</p>
+        </div>
+        <div class="stat-row">
+          <div><strong>7-15</strong><span>min/day</span></div>
+          <div><strong>0</strong><span>jumping</span></div>
+        </div>
+        <button class="primary-button" data-action="continue" type="button">Continue</button>
+      </section>
+    </template>
+
+    <template id="question-template">
+      <section class="question-screen">
+        <h1 id="question-title"></h1>
+        <p id="question-subtitle" class="question-subtitle"></p>
+        <div id="answer-grid" class="answer-grid"></div>
+      </section>
+    </template>
+
+    <template id="loading-template">
+      <section class="loading-screen">
+        <div class="pulse-ring">
+          <span>✓</span>
+        </div>
+        <h1>Claire is matching your first step.</h1>
+        <p>
+          Not the hardest plan. Not the trendiest one. The one least likely to make you quit by Wednesday.
+        </p>
+        <div class="loading-lines" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+    </template>
+
+    <template id="result-template">
+      <section class="result-screen">
+        <p class="result-kicker">Your starting point</p>
+        <h1 id="result-title"></h1>
+        <div id="risk-box" class="risk-box"></div>
+        <p id="result-copy" class="result-copy"></p>
+        <a id="primary-cta" class="primary-button" href="#" target="_blank" rel="noopener">
+          Open my program
+        </a>
+        <div class="product-panel">
+          <img id="result-image" alt="" />
+          <ul id="result-bullets"></ul>
+        </div>
+        <a id="secondary-cta" class="quiet-link" href="#" target="_blank" rel="noopener"></a>
+        <button class="ghost-button" data-action="restart" type="button">Retake the check</button>
+      </section>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
